@@ -52,6 +52,7 @@ class Directory extends Component {
                 imageUrl={section.imageUrl}
                 title={section.title}
                 size={section.size}
+                url={section.linkUrl}
               />
             );
           })}
