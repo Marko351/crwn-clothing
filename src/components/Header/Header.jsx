@@ -6,8 +6,7 @@ import { auth } from '../../firebase/firebase.utils';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import './Header.scss';
 
-const Header = ({ currentUser }) => {
-  console.log(currentUser);
+const Header = ({ user }) => {
   return (
     <div className='header'>
       <Link to='/' className='logo-container'>
@@ -20,7 +19,7 @@ const Header = ({ currentUser }) => {
         <Link className='option' to='/shop'>
           CONTACT
         </Link>
-        {currentUser ? (
+        {user.currentUser ? (
           <div className='option' onClick={() => auth.signOut()}>
             SIGN OUT
           </div>
