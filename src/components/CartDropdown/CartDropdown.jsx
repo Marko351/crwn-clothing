@@ -7,9 +7,8 @@ import './CartDropdown.scss';
 const CartDropdown = () => {
   return (
     <div className='cart-dropdown'>
-      <div className='cart-items'>
-        <CustomButton>Go To Checkout</CustomButton>
-      </div>
+      <div className='cart-items'></div>
+      <CustomButton>Go To Checkout</CustomButton>
     </div>
   );
 };
