@@ -8,12 +8,19 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem';
 import './Collection.scss';
 
 const CollectionPage = ({ match, collections }) => {
-  console.log(collections);
-  return (
-    <div className='category'>
-      <h2>Collection Page</h2>
-    </div>
-  );
+  if (collections[match.params.collectionId]) {
+    const { title, items, id } = collections[match.params.collectionId];
+    return (
+      <div key={id} className='collection-page'>
+        <h2 className='title'>{title}</h2>
+        <div className='items'>
+          {items.map(item => (
+            <CollectionItem key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 };
 
 const mapStateToProps = state => ({
