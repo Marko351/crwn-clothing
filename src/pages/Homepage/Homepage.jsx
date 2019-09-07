@@ -5,7 +5,7 @@ import './Homepage.scss';
 
 const Homepage = () => {
   return (
-    <div classname='Homepage'>
+    <div className='Homepage'>
       <Directory />
     </div>
   );
